@@ -6,6 +6,7 @@ clear;
 % saved the data
 load('sampleData.mat');
 
+%% adding some comments
 %% plot the data from the first cell
 firstCellData = cellResps(:, 1);
 
