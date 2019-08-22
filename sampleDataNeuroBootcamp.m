@@ -1,0 +1,6 @@
+Mi1All = GetPathsFromDatabase('Mi1','alternatingContrastFullField_p2_p9_15sRepeat','GC6f','', 'Catherine', 'date', '>', '2016-06-21');
+Mi1Tags = GetPathsFromDatabase('Mi1','alternatingContrastFullField_p2_p9_15sRepeat','GC6f','', 'Catherine', 'date', '>', '2016-06-21', 'tags', 'in', {'TNT', 'picrotoxin'});
+Mi1ToUse = Mi1All(~ismember(Mi1All, Mi1Tags));
+Mi1SampleData= RunAnalysis('analysisFile',{'kernelAnalysisWithRepeats_interpolatedResponses'},'dataPath',Mi1ToUse([1:10]),'roiExtractionFile', 'ManualRoiExtraction','roiSelectionFile', 'RoiSelectionSizeAndResp','filterMovie',0,'forceRois',0,'epochsForSelectivity', ...
+    {'On', 'Off'},...
+    'dataX',[],'labelX','','combOpp',0,'numIgnore', 0, 'backgroundSubtractMovie', 0, 'stimulusResponseAlignment', 1, 'backgroundSubtractByRoi', 1, 'noTrueInterleave', 1, 'numIgnore', 0, 'numFramesForward', 5,'usePrevMasks', 1);
