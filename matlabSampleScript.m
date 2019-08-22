@@ -53,3 +53,4 @@ dataMean = mean(cellResps, 'omitnan');
 
 dataMean = mean(cellResps, 2, 'omitnan');
 % Now we have a 1920 x 1 vector
+figure;plot(dataMean);
